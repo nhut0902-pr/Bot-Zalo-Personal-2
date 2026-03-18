@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quản lý Bot AI Auto</title>
+    <title>Dashboard AI Auto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-dark text-white">
+<body class="bg-dark text-white text-center">
     <div class="container mt-5">
-        <div class="card bg-secondary text-white shadow">
-            <div class="card-header text-center"><h3>Cài đặt Bot AI Auto</h3></div>
-            <div class="card-body">
-                <form action="/save" method="POST">
-                    <div class="mb-3">
-                        <label>Gemini API Key:</label>
-                        <input type="password" name="gemini_key" class="form-control" value="{{config.gemini_key}}">
-                    </div>
-                    <div class="mb-3">
-                        <label>Zalo Access Token:</label>
-                        <textarea name="zalo_access_token" class="form-control" rows="3">{{config.zalo_access_token}}</textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label>Zalo Refresh Token:</label>
-                        <input type="text" name="zalo_refresh_token" class="form-control" value="{{config.zalo_refresh_token}}">
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Lưu cấu hình</button>
-                </form>
-            </div>
+        <div class="card bg-secondary p-4 shadow">
+            <h2>Cài đặt Bot (Nhutcoder)</h2>
+            <form action="/save" method="POST" class="text-start">
+                <div class="mb-3">
+                    <label>Gemini API Key:</label>
+                    <input type="password" name="gemini_key" class="form-control" value="{{config.gemini_key}}">
+                </div>
+                <div class="mb-3">
+                    <label>Zalo Bot Token:</label>
+                    <textarea name="zalo_token" class="form-control" rows="3">{{config.zalo_token}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Lưu Cấu Hình</button>
+            </form>
+            <p class="mt-3 small">* Sau khi lưu, hãy vào Render nhấn "Manual Deploy" -> "Clear Cache & Deploy" để bot nhận token mới.</p>
         </div>
     </div>
 </body>
