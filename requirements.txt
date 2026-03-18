@@ -1,5 +1,4 @@
 flask
 requests
+zalo-bot
 gunicorn
-google-generativeai
-https://github.com/mrhieu838/zalo-bot/archive/refs/heads/main.zip
